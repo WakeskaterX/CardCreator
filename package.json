@@ -2,7 +2,7 @@
   "name": "cardcreator",
   "version": "0.0.0",
   "description": "Create Cards from base images, fonts and settings",
-  "main": "app.js",
+  "main": "creator.js",
   "scripts": {
     "test": "mocha test/ -R spec"
   },
@@ -19,5 +19,7 @@
   "bugs": {
     "url": "https://github.com/WakeskaterX/CardCreator/issues"
   },
-  "homepage": "https://github.com/WakeskaterX/CardCreator#readme"
+  "homepage": "https://github.com/WakeskaterX/CardCreator#readme",
+  "dependencies": {
+  }
 }
