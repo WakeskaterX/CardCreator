@@ -1,0 +1,23 @@
+{
+  "name": "cardcreator",
+  "version": "0.0.0",
+  "description": "Create Cards from base images, fonts and settings",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test/ -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WakeskaterX/CardCreator.git"
+  },
+  "keywords": [
+    "card",
+    "game"
+  ],
+  "author": "Jason Carter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WakeskaterX/CardCreator/issues"
+  },
+  "homepage": "https://github.com/WakeskaterX/CardCreator#readme"
+}
