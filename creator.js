@@ -1,7 +1,9 @@
+var config = require('./config/card_settings.json');
+
 var Canvas = require('canvas');
 var Image = Canvas.Image;
 var Font = Canvas.Font;
-var canvas = new Canvas(200,320);
+var canvas = new Canvas(config.card_width,config.card_height);
 var ctx = canvas.getContext('2d');
 var fs = require('fs');
 var path = require('path');

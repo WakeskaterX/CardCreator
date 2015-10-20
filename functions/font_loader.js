@@ -6,6 +6,12 @@ function loadFonts(ctx, Font) {
   OpenSans.addFace(fontFile('OpenSans/OpenSans-Italic.ttf'),'normal','italic');
   OpenSans.addFace(fontFile('OpenSans/OpenSans-Semibold.ttf'), 'semibold');
   ctx.addFont(OpenSans);
+  var Coolville = new Font('Coolville', fontFile('Coolville/Coolville.ttf'));
+  ctx.addFont(Coolville);
+  var EightBitSolid = new Font('8BitSolid', fontFile('8BitLimit/8bitlimr.ttf'));
+  ctx.addFont(EightBitSolid);
+  var EightBitLimit = new Font('8BitLimit', fontFile('8BitLimit/8bitlimo.ttf'));
+  ctx.addFont(EightBitLimit);
 };
 
 function fontFile(name) {
