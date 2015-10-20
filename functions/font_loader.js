@@ -6,6 +6,9 @@ function loadFonts(ctx, Font) {
   OpenSans.addFace(fontFile('OpenSans/OpenSans-Italic.ttf'),'normal','italic');
   OpenSans.addFace(fontFile('OpenSans/OpenSans-Semibold.ttf'), 'semibold');
   ctx.addFont(OpenSans);
+  var AlegreyaSans = new Font('AlegreyaSans', fontFile('AlegreyaSans/AlegreyaSans-Regular.ttf'));
+  AlegreyaSans.addFace(fontFile('AlegreyaSans/AlegreyaSans-Bold.ttf'), 'bold');
+  ctx.addFont(AlegreyaSans);
   var Coolville = new Font('Coolville', fontFile('Coolville/Coolville.ttf'));
   ctx.addFont(Coolville);
   var EightBitSolid = new Font('8BitSolid', fontFile('8BitLimit/8bitlimr.ttf'));

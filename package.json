@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/WakeskaterX/CardCreator#readme",
   "dependencies": {
+    "async": "^1.4.2",
     "canvas": "1.1.0"
   }
 }

@@ -1,0 +1,51 @@
+[{
+  "id":"S1-001",
+  "name": "Tester of the Wind",
+  "file_name": "tester_S1_001",
+  "card": {
+    "title": "Tester of the Wind",
+    "type": "sorceror",
+    "picture": null,
+    "description": "When a spell does damage, smack a QA Person with a newspaper",
+    "icons": {
+      "upper_right": {
+        "image": "wind_large",
+        "value": null
+      },
+      "lower_left": {
+        "image": "heart",
+        "value": "25"
+      },
+      "lower_right": {
+        "image": null,
+        "value": null
+      }
+    }
+  }
+},{
+  "id": "S1-002",
+  "name": "Waterman the Great",
+  "file_name": "water_S1_002",
+  "card": {
+    "title": "Waterman the Great",
+    "type": "sorceror",
+    "picture": null,
+    "description": "Get +1 Hydration when you Drink some water",
+    "icons": {
+      "upper_right": {
+        "image": "water_large",
+        "value": null
+      },
+      "lower_left": {
+        "image": "heart",
+        "value": "30"
+      },
+      "lower_right": {
+        "image": null,
+        "value": null
+      }
+    }
+  }
+}, {
+
+}]

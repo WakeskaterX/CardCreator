@@ -1,39 +1,46 @@
 {
-  "card_width": 240,
-  "card_height": 336,
+  "card_width": 480,
+  "card_height": 672,
   "image_position": {
-    "x": 10,
-    "y": 50,
-    "width": 220,
-    "height": 90
+    "x": 20,
+    "y": 100,
+    "width": 440,
+    "height": 180
+  },
+  "title_position": {
+    "x": 40,
+    "y": 60
   },
   "text_position": {
-    "x": 10,
-    "y": 150,
-    "width": 220,
-    "height": 140
+    "x": 20,
+    "y": 300,
+    "width": 440,
+    "height": 280
   },
   "type": {
-    "x": 200,
-    "y": 12,
-    "width": 24,
-    "height": 24
+    "x": 400,
+    "y": 24,
+    "width": 48,
+    "height": 48
   },
   "attack_icon": {
-    "x": 12,
-    "y": 300,
-    "width": 24,
-    "height": 24
+    "x": 24,
+    "y": 600,
+    "width": 48,
+    "height": 48
   },
   "timer_icon": {
-    "x": 200,
-    "y": 300,
-    "width": 24,
-    "height": 24
+    "x": 400,
+    "y": 600,
+    "width": 48,
+    "height": 48
   },
   "fonts": {
-    "title_font": "Coolville",
+    "title_font": "AlegreyaSans",
+    "title_size": "32px",
     "icon_font": "8BitLimit",
-    "icon_back_font": "8BitSolid"
+    "icon_back_font": "8BitSolid",
+    "description": "AlegreyaSans bold",
+    "description_size": "24px"
   }
 }
