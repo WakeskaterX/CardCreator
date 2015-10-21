@@ -17,23 +17,31 @@
     "width": 440,
     "height": 280
   },
-  "type": {
+  "mini_icons": {
     "x": 400,
-    "y": 24,
-    "width": 48,
-    "height": 48
+    "y": 85,
+    "width": 32,
+    "height": 32,
+    "p1_width": 24,
+    "p1_height": 24
   },
-  "attack_icon": {
-    "x": 24,
-    "y": 600,
-    "width": 48,
-    "height": 48
+  "upper_right": {
+    "x": 380,
+    "y": 16,
+    "width": 64,
+    "height": 64
   },
-  "timer_icon": {
-    "x": 400,
-    "y": 600,
-    "width": 48,
-    "height": 48
+  "lower_left": {
+    "x": 16,
+    "y": 590,
+    "width": 64,
+    "height": 64
+  },
+  "lower_right": {
+    "x": 380,
+    "y": 590,
+    "width": 64,
+    "height": 64
   },
   "fonts": {
     "title_font": "AlegreyaSans",

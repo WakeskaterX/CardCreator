@@ -12,7 +12,9 @@ var fl = require('./functions/font_loader.js');
 var title = require('./functions/title.js');
 var icons = require('./functions/icons.js');
 
-var all_cards = require('./card_values/set1.json');
+var set1_sorcerors = require('./card_values/set1_sorcerors.json');
+var set1_cards = require('./cards_values/set1_cards.json');
+var all_cards = set1_sorcerors.concat(set1_cards);
 
 if (!Font) console.log("No Font Added!");
 
@@ -23,6 +25,9 @@ async.eachSeries(all_cards, function(card, callback) {
   ctx.patternQuality = "bilinear";
   back.drawBackground(ctx);
   icons.drawIcons(ctx, Image, card.card.icons);
+  if (card.card.type === "sorceror") {
+    icons.drawMiniIcons(ctx, Image, card.card.mini_icons);
+  }
   desc.writeDescription(ctx, card.card.description);
   title.writeTitle(ctx, card.card.title);
   var out = fs.createWriteStream(__dirname+"/cards/"+card.file_name+".png");

@@ -1,0 +1,391 @@
+[{
+  "id":"S1-007",
+  "name": "Mana Spark",
+  "file_name": "S1_007_manaspark",
+  "card": {
+    "title": "Mana Spark",
+    "type": "spell",
+    "rarity": "common",
+    "picture": null,
+    "description": "",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "1"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "1"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "2"
+      }
+    }
+  }
+},{
+  "id":"S1-008",
+  "name": "Mana Strike",
+  "file_name": "S1_008_manastrike",
+  "card": {
+    "title": "Mana Strike",
+    "type": "spell",
+    "rarity": "common",
+    "picture": null,
+    "description": "",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "2"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "2"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "2"
+      }
+    }
+  }
+},{
+  "id":"S1-009",
+  "name": "Mana Cannon",
+  "file_name": "S1_009_manacannon",
+  "card": {
+    "title": "Mana Cannon",
+    "type": "spell",
+    "rarity": "common",
+    "picture": null,
+    "description": "",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "5"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "6"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "3"
+      }
+    }
+  }
+},{
+  "id":"S1-010",
+  "name": "Delayed Hit",
+  "file_name": "S1_010_delayhit",
+  "card": {
+    "title": "Delayed Hit",
+    "type": "spell",
+    "rarity": "common",
+    "picture": null,
+    "description": "",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "2"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "3"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "4"
+      }
+    }
+  }
+},{
+  "id":"S1-011",
+  "name": "Empower",
+  "file_name": "S1_011_empower",
+  "card": {
+    "title": "Empower",
+    "type": "spell",
+    "rarity": "common",
+    "picture": null,
+    "description": "Chain: +3 Damage",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "2"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "0"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "-"
+      }
+    }
+  }
+},{
+  "id":"S1-012",
+  "name": "Haste",
+  "file_name": "S1_012_haste",
+  "card": {
+    "title": "Haste",
+    "type": "spell",
+    "rarity": "common",
+    "picture": null,
+    "description": "Chain: Time 1",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "2"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "0"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "-"
+      }
+    }
+  }
+},{
+  "id":"S1-013",
+  "name": "Dummy",
+  "file_name": "S1_013_dummy",
+  "card": {
+    "title": "Dummy",
+    "type": "spell",
+    "rarity": "common",
+    "picture": null,
+    "description": "Chain: On Hit: Draw 1",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "0"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "0"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "-"
+      }
+    }
+  }
+},{
+  "id":"S1-014",
+  "name": "Slow",
+  "file_name": "S1_014_slow",
+  "card": {
+    "title": "Slow",
+    "type": "spell",
+    "rarity": "common",
+    "picture": null,
+    "description": "Chain: Time 4",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "1"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "0"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "-"
+      }
+    }
+  }
+},{
+  "id":"S1-015",
+  "name": "Quick Draw",
+  "file_name": "S1_015_quickdraw",
+  "card": {
+    "title": "Quick Draw",
+    "type": "spell",
+    "rarity": "uncommon",
+    "picture": null,
+    "description": "On Hit: Draw 2",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "4"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "1"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "1"
+      }
+    }
+  }
+},{
+  "id":"S1-016",
+  "name": "Mana Burn",
+  "file_name": "S1_016_manaburn",
+  "card": {
+    "title": "Mana Burn",
+    "type": "spell",
+    "rarity": "uncommon",
+    "picture": null,
+    "description": "On Hit: Mana Burn 2",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "4"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "2"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "3"
+      }
+    }
+  }
+},{
+  "id":"S1-017",
+  "name": "Deflect",
+  "file_name": "S1_017_deflect",
+  "card": {
+    "title": "Deflect",
+    "type": "spell",
+    "rarity": "uncommon",
+    "picture": null,
+    "description": "Deflect All: Duration 2",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "4"
+      },
+      "lower_left": {
+        "image": "defense",
+        "value": "0"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "3"
+      }
+    }
+  }
+},{
+  "id":"S1-018",
+  "name": "Gather Power",
+  "file_name": "S1_018_gatherpower",
+  "card": {
+    "title": "Gather Power",
+    "type": "spell",
+    "rarity": "uncommon",
+    "picture": null,
+    "description": "Mana 3",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "2"
+      },
+      "lower_left": {
+        "image": "defense",
+        "value": "0"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "2"
+      }
+    }
+  }
+},{
+  "id":"S1-019",
+  "name": "Strike Dash",
+  "file_name": "S1_019_strikedash",
+  "card": {
+    "title": "Strike Dash",
+    "type": "spell",
+    "rarity": "rare",
+    "picture": null,
+    "description": "On Hit: Deflect 1 on Next Moment",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "3"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "2"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "2"
+      }
+    }
+  }
+},{
+  "id":"S1-020",
+  "name": "Convert",
+  "file_name": "S1_020_convert",
+  "card": {
+    "title": "Convert",
+    "type": "spell",
+    "rarity": "epic",
+    "picture": null,
+    "description": "Surge Mana X",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "X"
+      },
+      "lower_left": {
+        "image": "defense",
+        "value": "0"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "4"
+      }
+    }
+  }
+},{
+  "id":"S1-021",
+  "name": "Aether Strike",
+  "file_name": "S1_021_aetherstrike",
+  "card": {
+    "title": "Aether Strike",
+    "type": "spell",
+    "rarity": "mystic",
+    "picture": null,
+    "description": "Surge Strike X",
+    "mini_icons": [],
+    "icons": {
+      "upper_right": {
+        "image": "mana_large",
+        "value": "X"
+      },
+      "lower_left": {
+        "image": "attack",
+        "value": "X"
+      },
+      "lower_right": {
+        "image": "cast_time",
+        "value": "2"
+      }
+    }
+  }
+}]
