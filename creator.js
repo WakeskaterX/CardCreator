@@ -13,7 +13,7 @@ var title = require('./functions/title.js');
 var icons = require('./functions/icons.js');
 
 var set1_sorcerors = require('./card_values/set1_sorcerors.json');
-var set1_cards = require('./cards_values/set1_cards.json');
+var set1_cards = require('./card_values/set1_cards.json');
 var all_cards = set1_sorcerors.concat(set1_cards);
 
 if (!Font) console.log("No Font Added!");
