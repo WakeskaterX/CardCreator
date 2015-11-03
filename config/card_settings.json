@@ -11,6 +11,12 @@
     "x": 40,
     "y": 60
   },
+  "title_back": {
+    "x": 0,
+    "y": 25,
+    "width": 480,
+    "height": 50
+  },
   "text_position": {
     "x": 20,
     "y": 300,
@@ -44,11 +50,18 @@
     "height": 64
   },
   "fonts": {
-    "title_font": "AlegreyaSans",
+    "title_font": "AldoTheApache bold",
     "title_size": "32px",
-    "icon_font": "8BitLimit",
-    "icon_back_font": "8BitSolid",
-    "description": "AlegreyaSans bold",
-    "description_size": "24px"
+    "description": "Timeless bold",
+    "description_size": "24px",
+    "number_icon_size": 28,
+    "number_icon_kerning": 0
+  },
+  "rarity_colors": {
+    "common": "#FFF",
+    "uncommon": "#9F6",
+    "rare": "#6CF",
+    "epic": "#C6F",
+    "mystic": "#FD3"
   }
 }

@@ -25,6 +25,20 @@ var icon_mapping = {
   'healing': 'icons/type_healign.png'
 }
 
+var number_mapping = {
+  '0': 'numbers/0.png',
+  '1': 'numbers/1.png',
+  '2': 'numbers/2.png',
+  '3': 'numbers/3.png',
+  '4': 'numbers/4.png',
+  '5': 'numbers/5.png',
+  '6': 'numbers/6.png',
+  '7': 'numbers/7.png',
+  '8': 'numbers/8.png',
+  '9': 'numbers/9.png',
+  'X': 'numbers/X.png'
+}
+
 function getImage(Image, icon_name) {
   var file_name = icon_mapping[icon_name];
   if (file_name) {
@@ -38,6 +52,20 @@ function getImage(Image, icon_name) {
   }
 }
 
+function getNumberImage(Image, number_string) {
+  var file_name = number_mapping[number_string];
+  if (file_name) {
+    var location = path.join(__dirname, '../images/', file_name);
+    var png = fs.readFileSync(location);
+    var img = new Image;
+    img.src = png;
+    return img;
+  } else {
+    return null;
+  }
+}
+
 module.exports = {
-  getImage: getImage
+  getImage: getImage,
+  getNumberImage: getNumberImage
 }

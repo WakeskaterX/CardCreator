@@ -15,6 +15,11 @@ function loadFonts(ctx, Font) {
   ctx.addFont(EightBitSolid);
   var EightBitLimit = new Font('8BitLimit', fontFile('8BitLimit/8bitlimo.ttf'));
   ctx.addFont(EightBitLimit);
+  var AldoTheApache = new Font('AldoTheApache', fontFile('AldoTheApache/AldoTheApache.ttf'));
+  ctx.addFont(AldoTheApache);
+  var Timeless = new Font('Timeless', fontFile('Timeless/Timeless.ttf'));
+  Timeless.addFace(fontFile('Timeless/Timeless-Bold.ttf'), 'bold');
+  ctx.addFont(Timeless);
 };
 
 function fontFile(name) {

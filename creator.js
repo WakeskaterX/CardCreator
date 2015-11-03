@@ -29,7 +29,7 @@ async.eachSeries(all_cards, function(card, callback) {
     icons.drawMiniIcons(ctx, Image, card.card.mini_icons);
   }
   desc.writeDescription(ctx, card.card.description);
-  title.writeTitle(ctx, card.card.title);
+  title.writeTitle(ctx, card.card.title, card.card.rarity);
   var out = fs.createWriteStream(__dirname+"/cards/"+card.file_name+".png");
   var stream = canvas.createPNGStream();
 
