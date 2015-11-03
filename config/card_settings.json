@@ -1,6 +1,8 @@
 {
   "card_width": 480,
   "card_height": 672,
+  "border_width": 6,
+  "border_color": "#75613B",
   "image_position": {
     "x": 20,
     "y": 100,
@@ -55,7 +57,7 @@
     "description": "Timeless bold",
     "description_size": "24px",
     "number_icon_size": 28,
-    "number_icon_kerning": 0
+    "number_icon_kerning": -2
   },
   "rarity_colors": {
     "common": "#FFF",

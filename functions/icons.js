@@ -9,11 +9,24 @@ var valid_numbers = ['0','1','2','3','4','5','6','7','8','9','X'];
 function Icon() {
   //Public Functions
   this.drawIcons = function (ctx, Image, icons) {
-    var icon_fire_lg = cf.getImage(Image, icons.upper_right.image);
-    drawIconWithText(ctx, Image, icon_fire_lg, icons.upper_right.value,
+    var icon_ele_lg = cf.getImage(Image, icons.upper_right.image);
+    var icon_adjust_x = 0, icon_adjust_y = 0;
+    if (icons.upper_right.image === "fire_large") {
+      icon_adjust_x = 2;
+      icon_adjust_y = 8;
+    }
+    if (icons.upper_right.image === "water_large") {
+      icon_adjust_x = 1;
+      icon_adjust_y = 8;
+    }
+    if (icons.upper_right.image === "wind_large") {
+      icon_adjust_x = 3;
+      icon_adjust_y = 3;
+    }
+    drawIconWithText(ctx, Image, icon_ele_lg, icons.upper_right.value,
       config.upper_right.x, config.upper_right.y,
       config.upper_right.width, config.upper_right.height,
-      0, 0);
+      icon_adjust_x, icon_adjust_y);
     var icon_attack = cf.getImage(Image, icons.lower_left.image);
     drawIconWithText(ctx, Image, icon_attack, icons.lower_left.value,
       config.lower_left.x, config.lower_left.y,
