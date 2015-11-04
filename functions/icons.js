@@ -79,7 +79,7 @@ function Icon() {
   function drawMiniIcon(ctx, image, plusone, x, y, width, height, adjust_x) {
     if (image) {
       ctx.drawImage(image, x + adjust_x, y, width, height);
-      ctx.drawImage(plusone, x + adjust_x + 4, y + 6, config.mini_icons.p1_width, config.mini_icons.p1_height);
+      ctx.drawImage(plusone, x + adjust_x, y + 4, config.mini_icons.p1_width, config.mini_icons.p1_height);
     }
   }
 }

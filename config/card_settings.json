@@ -28,10 +28,10 @@
   "mini_icons": {
     "x": 400,
     "y": 85,
-    "width": 32,
-    "height": 32,
-    "p1_width": 24,
-    "p1_height": 24
+    "width": 36,
+    "height": 36,
+    "p1_width": 36,
+    "p1_height": 36
   },
   "upper_right": {
     "x": 380,
@@ -56,7 +56,7 @@
     "title_size": "32px",
     "description": "Timeless bold",
     "description_size": "24px",
-    "number_icon_size": 28,
+    "number_icon_size": 32,
     "number_icon_kerning": -2
   },
   "rarity_colors": {
