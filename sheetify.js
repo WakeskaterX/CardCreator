@@ -34,6 +34,10 @@ for (var i = 0; i < all_card_names.length; i++) {
   }
   sheet.push(all_card_names[i]);
   sheet_index++;
+  //Last Sheet Check
+  if (i === all_card_names.length-1) {
+    sheets.push(sheet);
+  }
 }
 
 //Draw Each Sheet
