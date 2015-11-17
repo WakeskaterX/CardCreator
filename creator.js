@@ -13,17 +13,18 @@ var title = require('./functions/title.js');
 var icons = require('./functions/icons.js');
 
 var set1_sorcerors = require('./card_values/set1_sorcerors.json');
-var set1_cards = require('./card_values/set1_cards.json');
-var all_cards = set1_sorcerors.concat(set1_cards);
+var set1_cards_A = require('./card_values/set1_cards_A.json');
+var set1_cards_B = require('./card_values/set1_cards_B.json');
+var all_cards = set1_sorcerors.concat(set1_cards_A).concat(set1_cards_B);
 
 if (!Font) console.log("No Font Added!");
 
-async.eachSeries(all_cards, function(card, callback) {
+async.each(all_cards, function(card, callback) {
   var canvas = new Canvas(config.card_width,config.card_height);
   var ctx = canvas.getContext('2d');
   fl.loadFonts(ctx, Font);
   ctx.patternQuality = "bilinear";
-  back.drawBackground(ctx);
+  back.drawBackground(ctx, card.card.picture);
   icons.drawIcons(ctx, Image, card.card.icons);
   if (card.card.type === "sorceror") {
     icons.drawMiniIcons(ctx, Image, card.card.mini_icons);
@@ -39,7 +40,7 @@ async.eachSeries(all_cards, function(card, callback) {
 
   stream.on('end', function(err) {
     callback();
-  })
+  });
 });
 
 

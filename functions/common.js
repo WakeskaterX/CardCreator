@@ -3,6 +3,8 @@
  */
 var fs = require('fs');
 var path = require('path');
+var Canvas = require('canvas');
+var Image = Canvas.Image;
 
 var icon_mapping = {
   'wind_large': 'elements/element_wind_large.png',
@@ -22,7 +24,7 @@ var icon_mapping = {
   'plus_one': 'icons/misc_plus_one.png',
   'attack': 'icons/type_attack.png',
   'defense': 'icons/type_defense.png',
-  'healing': 'icons/type_healign.png'
+  'healing': 'icons/type_healing.png'
 }
 
 var number_mapping = {
@@ -65,7 +67,36 @@ function getNumberImage(Image, number_string) {
   }
 }
 
+function getBackgroundImage(Image, image_name) {
+  var location = path.join(__dirname, '../images/backgrounds/', image_name);
+  var png;
+  try {
+    png = fs.readFileSync(location);
+  } catch (e) {
+    console.log(e);
+    return null;
+  }
+  var img = new Image;
+  img.src = png;
+  return img;
+}
+
+function getPNG(location) {
+  var png;
+  try {
+    png = fs.readFileSync(location);
+  } catch (e) {
+    console.log(e)
+    return;
+  }
+  var img = new Image;
+  img.src = png;
+  return img;
+}
+
 module.exports = {
   getImage: getImage,
-  getNumberImage: getNumberImage
+  getNumberImage: getNumberImage,
+  getBackgroundImage: getBackgroundImage,
+  getPNG: getPNG
 }

@@ -135,7 +135,7 @@
     }],
     "icons": {
       "upper_right": {
-        "image": "lightning_large",
+        "image": "lightening_large",
         "value": null
       },
       "lower_left": {

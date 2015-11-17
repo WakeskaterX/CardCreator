@@ -57,7 +57,7 @@
     "description": "Timeless bold",
     "description_size": "24px",
     "number_icon_size": 32,
-    "number_icon_kerning": -2
+    "number_icon_kerning": -4
   },
   "rarity_colors": {
     "common": "#FFF",
