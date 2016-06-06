@@ -5,8 +5,6 @@ var fs = require('fs');
 var path = require('path');
 var gd = require('node-gd');
 
-var absolute_path = "/Users/jasoncarter/Projects/Other_Projects/CardCreator/";
-
 var icon_mapping = {
   'wind_large': 'elements/element_wind_large.png',
   'lightening_large': 'elements/element_lightning_large.png',
@@ -42,56 +40,57 @@ var number_mapping = {
   'X': 'numbers/X.png'
 }
 
-function getImage(Image, icon_name) {
+function getImage(icon_name) {
   var file_name = icon_mapping[icon_name];
   if (file_name) {
-    var location = path.join(__dirname, '../images/', file_name);
-    var png = fs.readFileSync(location);
-    var img = new Image;
-    img.src = png;
+    var img;
+    var location = path.join(__dirname, '/images/', file_name);
+    try {
+      img = gd.openPng(location);
+    } catch (e) {
+      console.log(e);
+      return null;
+    }
     return img;
-  } else {
-    return null;
-  }
+  } else return null;
 }
 
-function getNumberImage(Image, number_string) {
+function getNumberImage(number_string) {
   var file_name = number_mapping[number_string];
   if (file_name) {
     var location = path.join(__dirname, '../images/', file_name);
-    var png = fs.readFileSync(location);
-    var img = new Image;
-    img.src = png;
+    var img;
+    try {
+      img = gd.openPng(location);
+    } catch (e) {
+      console.log(e);
+      return null;
+    }
     return img;
-  } else {
-    return null;
-  }
+  } else return null;
 }
 
-function getBackgroundImage(Image, image_name) {
+function getBackgroundImage(image_name) {
   var location = path.join(__dirname, '../images/backgrounds/', image_name);
-  var png;
+  var img;
   try {
-    png = fs.readFileSync(location);
+    img = gd.openPng(location);
   } catch (e) {
     console.log(e);
     return null;
   }
-  var img = new Image;
-  img.src = png;
   return img;
 }
 
+//Use Absolute Path
 function getPNG(location) {
-  var png;
+  var img;
   try {
-    png = fs.readFileSync(location);
+    img = gd.openPng(location);
   } catch (e) {
-    console.log(e)
-    return;
+    console.log(e);
+    return null;
   }
-  var img = new Image;
-  img.src = png;
   return img;
 }
 

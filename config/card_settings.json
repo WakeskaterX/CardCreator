@@ -2,28 +2,38 @@
   "card_width": 480,
   "card_height": 672,
   "border_width": 6,
-  "border_color": "#75613B",
+  "border_color": "0x75613B",
+  "background_color": "0xFFFFDD",
+  "banner_color": "0x47476B",
+  "image_back_color": "0x888888",
+  "description_back_color": "0xAAAAAA",
   "image_position": {
     "x": 20,
     "y": 100,
     "width": 440,
-    "height": 180
+    "height": 180,
+    "x2": 460,
+    "y2": 280
   },
   "title_position": {
     "x": 40,
-    "y": 60
+    "y": 64
   },
   "title_back": {
     "x": 0,
     "y": 25,
     "width": 480,
-    "height": 50
+    "height": 50,
+    "x2": 480,
+    "y2": 75
   },
   "text_position": {
     "x": 20,
     "y": 300,
     "width": 440,
-    "height": 280
+    "height": 280,
+    "x2": 460,
+    "y2": 580
   },
   "mini_icons": {
     "x": 400,
@@ -52,18 +62,24 @@
     "height": 64
   },
   "fonts": {
-    "title_font": "AldoTheApache bold",
-    "title_size": "32px",
-    "description": "Timeless bold",
-    "description_size": "24px",
+    "title": {
+      "file": "AldoTheApache/AldoTheApache.ttf",
+      "weight": "bold",
+      "size": 32
+    },
+    "description": {
+      "file": "Timeless/Timeless-Bold.ttf",
+      "weight": "bold",
+      "size": 24
+    },
     "number_icon_size": 32,
     "number_icon_kerning": -4
   },
   "rarity_colors": {
-    "common": "#FFF",
-    "uncommon": "#9F6",
-    "rare": "#6CF",
-    "epic": "#C6F",
-    "mystic": "#FD3"
+    "Common": "0xFFFFFF",
+    "Uncommon": "0x99FF66",
+    "Rare": "0x66CCFF",
+    "Epic": "0xCC66FF",
+    "Mythic": "0xFFDD33"
   }
 }

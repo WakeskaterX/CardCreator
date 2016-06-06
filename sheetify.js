@@ -12,7 +12,7 @@ var config = require('./config/card_settings.json');
 var common = require('./functions/common.js');
 
 var settings = {
-  spacing: 12,
+  spacing: 4,
   border: 40,
   sheet_ratio: 11/8 //Ratio of Height ot Width
 }

@@ -6,7 +6,7 @@
     "title": "Mage Acolyte",
     "type": "sorceror",
     "rarity": "common",
-    "picture": null,
+    "picture": "S1_001_MageAcolyte_LG.png",
     "description": "Mage Acolyte can use any Elemental Spell at cost",
     "mini_icons": [],
     "icons": {
