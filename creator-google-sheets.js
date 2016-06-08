@@ -1,5 +1,4 @@
 var config = require('./config/card_settings.json');
-var run_config = require('./config/run_settings.json');
 
 var async = require('async');
 var fs = require('fs');

@@ -1,7 +1,7 @@
 {
   "name": "cardcreator",
   "version": "0.0.0",
-  "description": "Create Cards from base images, fonts and settings",
+  "description": "Create Cards from base images, fonts and google sheets",
   "main": "creator.js",
   "scripts": {
     "test": "mocha test/ -R spec"
