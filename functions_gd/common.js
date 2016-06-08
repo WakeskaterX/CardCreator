@@ -4,27 +4,32 @@
 var fs = require('fs');
 var path = require('path');
 var gd = require('node-gd');
+var config = require('../config/card_settings.json');
+var async = require('async');
 
 var icon_mapping = {
-  'wind_large': 'elements/element_wind_large.png',
-  'lightening_large': 'elements/element_lightning_large.png',
-  'water_large': 'elements/element_water_large.png',
-  'fire_large': 'elements/element_fire_large.png',
-  'mana_large': 'elements/element_mana_large.png',
-  'earth_large': 'elements/element_earth_large.png',
-  'wind_small': 'elements/element_wind_small.png',
-  'lightening_small': 'elements/element_lightning_small.png',
-  'water_small': 'elements/element_water_small.png',
-  'fire_small': 'elements/element_fire_small.png',
-  'mana_small': 'elements/element_mana_small.png',
-  'earth_small': 'elements/element_earth_small.png',
-  'heart': 'icons/icon_life.png',
-  'cast_time': 'icons/icon_cast_time.png',
+  'wind_large': 'elements/wind.png',
+  'lightning_large': 'elements/lightning.png',
+  'water_large': 'elements/water.png',
+  'fire_large': 'elements/fire.png',
+  'mana_large': 'elements/mana.png',
+  'earth_large': 'elements/earth.png',
+  'wind_small': 'elements/wind.png',
+  'lightning_small': 'elements/lightning.png',
+  'water_small': 'elements/water.png',
+  'fire_small': 'elements/fire.png',
+  'mana_small': 'elements/mana.png',
+  'earth_small': 'elements/earth.png',
+  'heart': 'icons/icon_life2.png',
+  'cast_time': 'icons/icon_cast_time2.png',
   'plus_one': 'icons/misc_plus_one.png',
-  'attack': 'icons/type_attack.png',
-  'defense': 'icons/type_defense.png',
-  'healing': 'icons/type_healing.png'
-}
+  'attack': 'icons/type_attack2.png',
+  'defense': 'icons/type_defense2.png',
+  'healing': 'icons/type_healing2.png',
+  'chain': 'icons/type_chain.png',
+  'boots': 'icons/boots.png',
+  'body': 'icons/shirt.png'
+};
 
 var number_mapping = {
   '0': 'numbers/0.png',
@@ -40,58 +45,61 @@ var number_mapping = {
   'X': 'numbers/X.png'
 }
 
-function getImage(icon_name) {
+function getImage(icon_name, callback) {
   var file_name = icon_mapping[icon_name];
   if (file_name) {
     var img;
-    var location = path.join(__dirname, '/images/', file_name);
-    try {
-      img = gd.openPng(location);
-    } catch (e) {
-      console.log(e);
-      return null;
-    }
-    return img;
-  } else return null;
+    var location = path.join(__dirname, '../images/', file_name);
+    gd.openPng(location, callback);
+  } else callback();
 }
 
-function getNumberImage(number_string) {
+function getNumberImage(number_string, callback) {
   var file_name = number_mapping[number_string];
   if (file_name) {
     var location = path.join(__dirname, '../images/', file_name);
-    var img;
-    try {
-      img = gd.openPng(location);
-    } catch (e) {
-      console.log(e);
-      return null;
-    }
-    return img;
-  } else return null;
+    gd.openPng(location, callback);
+  } else callback();
 }
 
-function getBackgroundImage(image_name) {
+function getAllImages(num_string, callback) {
+  var num_size = config.fonts.number_icon_size;
+  var num_kerning = config.fonts.number_icon_kerning;
+  var valid_numbers = Object.keys(number_mapping);
+  var number_chars = num_string.split('').filter(function(item) { return valid_numbers.indexOf(item) >= 0; });
+  var total_chars = number_chars.length;
+
+  var spacing_per_character = num_size + num_kerning;
+  var total_width = number_chars.length * spacing_per_character - num_kerning;
+
+  var results = {
+    width: total_width,
+    height: num_size,
+    images: []
+  };
+
+  async.forEachOf(number_chars, function(char, index, next) {
+    getNumberImage(char, function(err, char_img) {
+      results.images.push({
+        img: char_img,
+        x: index * spacing_per_character,
+        y: 0
+      })
+      next();
+    });
+  }, function(err) {
+    callback(err, results);
+  })
+}
+
+function getBackgroundImage(image_name, callback) {
   var location = path.join(__dirname, '../images/backgrounds/', image_name);
-  var img;
-  try {
-    img = gd.openPng(location);
-  } catch (e) {
-    console.log(e);
-    return null;
-  }
-  return img;
+  gd.openPng(location, callback);
 }
 
 //Use Absolute Path
-function getPNG(location) {
-  var img;
-  try {
-    img = gd.openPng(location);
-  } catch (e) {
-    console.log(e);
-    return null;
-  }
-  return img;
+function getPNG(location, callback) {
+  gd.openPng(location, callback);
 }
 
 module.exports = {
@@ -99,5 +107,5 @@ module.exports = {
   getNumberImage: getNumberImage,
   getBackgroundImage: getBackgroundImage,
   getPNG: getPNG,
-  absolutePath: absolute_path
+  getAllImages: getAllImages
 }

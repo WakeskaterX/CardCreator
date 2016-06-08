@@ -1,7 +1,8 @@
 var config = require('../config/card_settings.json');
+var common = require('./common.js');
 
 module.exports = {
-  drawBackground: function drawBackground(img, callback) {
+  drawBackground: function drawBackground(img, data, callback) {
     //Draw Background Color
     var bkg_color = parseInt(config.background_color);
     img.filledRectangle(0, 0, config.card_width, config.card_height, bkg_color);
@@ -21,6 +22,13 @@ module.exports = {
     var desc_back_color = parseInt(config.description_back_color);
     img.filledRectangle(config.text_position.x, config.text_position.y, config.text_position.x2, config.text_position.y2, desc_back_color);
 
-    callback();
+    //Draw Image if it exists
+    var image_file = data.imagename;
+    common.getBackgroundImage(image_file, function(err, back_img) {
+      if (back_img) {
+        back_img.copyResampled(img, config.image_position.x, config.image_position.y, 0, 0, config.image_position.width, config.image_position.height, back_img.width, back_img.height);
+      }
+      callback()
+    });
   }
 }

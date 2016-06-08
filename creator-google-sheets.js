@@ -8,12 +8,12 @@ var path = require('path');
 var back = require('./functions_gd/background.js');
 var title = require('./functions_gd/title.js');
 var desc = require('./functions_gd/description.js');
+var icons = require('./functions_gd/icons.js');
 
 var GoogleSpreadsheet = require('google-spreadsheet');
 var gd = require('node-gd');
 
-var url = "https://docs.google.com/spreadsheets/d/1RiI9eupH5Ylod9iBK4hWqbLg3VRGHacPHthowkHi7jQ/edit?usp=sharing";
-var url_key = "1RiI9eupH5Ylod9iBK4hWqbLg3VRGHacPHthowkHi7jQ";
+var url_key = require('./private.js').google_sheets_key;
 
 var doc = new GoogleSpreadsheet(url_key);
 var sheet;
@@ -31,7 +31,6 @@ async.series([
   function writeRows(next) {
     sheet.getRows({}, function(err, rows) {
       console.log("GOT " + rows.length + " rows");
-      rows = rows.slice(0, 20); //TODO do all cards
       total_rows = rows.length;
       async.forEachOfSeries(rows, function(row, index, next_row) {
         var data = convertRow(row);
@@ -42,7 +41,7 @@ async.series([
           },
           function drawBackgrounds(image, cb) {
             img = image;
-            back.drawBackground(img, cb);
+            back.drawBackground(img, data, cb);
           },
           function drawTitle(cb) {
             title.drawTitle(img, data, cb);
@@ -51,7 +50,7 @@ async.series([
             desc.writeDescription(img, data, cb);
           },
           function drawIcons(cb) {
-
+            icons.drawIcons(img, data, cb);
           },
           function saveImage(cb) {
             var url = __dirname + "/cards2/" + generateCardId(data._id, data.name) + ".png";
@@ -84,7 +83,8 @@ function convertRow(row) {
     description: row.description,
     power: row.power,
     casttime: row.casttime,
-    imagename: row.imagename
+    imagename: row.imagename,
+    miniicons: row.miniicons
   };
 }
 

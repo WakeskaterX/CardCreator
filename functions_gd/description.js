@@ -17,7 +17,7 @@ function Description() {
   function drawDescription(image, text, x, y, width, height) {
     if (text) {
       var desc_font = "/Users/jasoncarter/Projects/Other_Projects/CardCreator/fonts/" + config.fonts.description.file;
-      var desc_color = 0xFFFFFF;
+      var desc_color = 0x222222;
       var desc_size = config.fonts.description.size;
       wrapText(image, desc_color, desc_font, desc_size, text, x, y, 24, 36);
     }

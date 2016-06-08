@@ -2,7 +2,7 @@
   "card_width": 480,
   "card_height": 672,
   "border_width": 6,
-  "border_color": "0x75613B",
+  "border_color": "0x75839E",
   "background_color": "0xFFFFDD",
   "banner_color": "0x47476B",
   "image_back_color": "0x888888",
@@ -36,8 +36,8 @@
     "y2": 580
   },
   "mini_icons": {
-    "x": 400,
-    "y": 85,
+    "x": 414,
+    "y": 76,
     "width": 36,
     "height": 36,
     "p1_width": 36,
@@ -50,7 +50,7 @@
     "height": 64
   },
   "lower_left": {
-    "x": 16,
+    "x": 48,
     "y": 590,
     "width": 64,
     "height": 64
