@@ -5,11 +5,9 @@
  */
 var fs = require('fs');
 var async = require('async');
-var Canvas = require('canvas');
-var Image = Canvas.Image;
-var Font = Canvas.Font;
+var gd = require('node-gd');
 var config = require('./config/card_settings.json');
-var common = require('./functions/common.js');
+var common = require('./functions_gd/common.js');
 
 var settings = {
   spacing: 4,
@@ -20,7 +18,7 @@ var settings = {
 var sheet_width = config.card_width * 3 + settings.border * 2 + settings.spacing * 2;
 var sheet_height = sheet_width * settings.sheet_ratio;
 
-var all_card_names = fs.readdirSync(__dirname+'/cards');
+var all_card_names = fs.readdirSync(__dirname + '/cards');
 
 var sheet_index = 0;
 var sheets = [];
@@ -42,8 +40,7 @@ for (var i = 0; i < all_card_names.length; i++) {
 
 //Draw Each Sheet
 async.forEachOf(sheets, function(active_sheet, index, callback) {
-  var canvas = new Canvas(sheet_width,sheet_height);
-  var ctx = canvas.getContext('2d');
+  var sheet_image = gd.createTrueColorSync(sheet_width, sheet_height);
   //Draw Each Card on the Sheet
   for (var k = 0; k < active_sheet.length; k++) {
     var card_name = active_sheet[k];
@@ -57,18 +54,10 @@ async.forEachOf(sheets, function(active_sheet, index, callback) {
     if (Math.floor(k/3) > 0) {
       start_y += (Math.floor(k/3) * settings.spacing);
     }
-    ctx.drawImage(common.getPNG(__dirname+'/cards/'+card_name), start_x, start_y, config.card_width, config.card_height);
+    var card_image = gd.createFromPng(__dirname + '/cards/' + card_name);
+    card_image.copyResampled(sheet_image, start_x, start_y, 0, 0, config.card_width, config.card_height, card_image.width, card_image.height);
   }
-  var out = fs.createWriteStream(__dirname+"/card_print_sheets/sheet"+index+".png");
-  var stream = canvas.createPNGStream();
-
-  stream.on('data', function(chunk) {
-    out.write(chunk);
-  });
-
-  stream.on('end', function(err) {
-    callback();
-  });
+  sheet_image.savePng(__dirname + '/card_print_sheets/sheet' + ('0' + index).slice(-2) + '.png', callback);
 }, function(err) {
   console.log(err);
 });

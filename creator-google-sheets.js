@@ -53,7 +53,7 @@ async.series([
             icons.drawIcons(img, data, cb);
           },
           function saveImage(cb) {
-            var url = __dirname + "/cards2/" + generateCardId(data._id, data.name) + ".png";
+            var url = __dirname + "/cards/" + generateCardId(data._id, data.name) + ".png";
             img.savePng(url, 0, function(err) {
               var perc = ((index + 1) / total_rows) * 100;
               writeProgress(perc);
